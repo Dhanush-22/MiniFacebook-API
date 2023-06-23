@@ -1,6 +1,2 @@
 # Ignore node_modules directory
 node_modules/
-
-# Ignore any files or directories that start with a dot (.)
-
-package-lock.json
