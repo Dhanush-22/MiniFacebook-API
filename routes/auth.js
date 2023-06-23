@@ -62,6 +62,7 @@ router.post("/register",async (req,res) => {
 
 
 router.post("/login", function(req, res){
+    console.log("In auth login");
     const email = req.body.email;
     const password = req.body.password;
 

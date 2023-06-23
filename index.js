@@ -11,11 +11,20 @@ const app = express();
 const multer = require("multer");
 const path = require("path")
 
+const cors = require("cors")
+
 const axios = require('axios');
+
+// enabling CORS for some specific origins only.
+let corsOptions = {
+  origin : ['https://dhanush-minisocialmedia.onrender.com'],
+}
+ 
 
 
 app.use(express.json())
 app.use(express.static("public"));
+app.use(cors())
 app.use(helmet());
 app.use(morgan("common"));
 app.use("/images",express.static(path.join(__dirname,"public/images")))
